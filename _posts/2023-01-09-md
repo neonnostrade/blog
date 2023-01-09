@@ -766,7 +766,7 @@ public class forMain {
 		   if(i%2==0) {
 		   sum += i; 라는 방법도 있음
 		   
-		   for (int e = 1; e <= 100; e+=2) {
+		   for (int e = 1; e <= 100; e++) {
 		    	e += e % 2;
 		    	
 		    	sum += e;
@@ -940,6 +940,384 @@ public class VarScopeMain {
 }
 
 
+{% endhighlight %}
+
+5-1
+{% highlight java %}
+package day_05;
+
+public class ForForMain {
+
+	public static void main(String[] args) {
+		
+		for (int h = 1; h <= 12; h++) {
+			System.out.println("[[["+h+"시]]]");
+			
+			for (int m = 0; m < 60; m++) {
+				System.out.println(h+":"+m);
+			}
+			
+			//System.out.println(h+":"+m);
+		}
+		
+		System.out.println("----------------------------------------");
+		
+		for (int i = 2; i <= 9; i ++) {
+			System.out.println(i+"단");
+			
+			for (int j = 1; j <= 9; j++) {
+				System.out.println(i+"*"+j+"="+(i*j));
+			}
+		}
+		
+		System.out.println("----------------------------------------");
+		
+		for (int i = 1; i <= 9; i ++) {
+			for (int j = 2; j <= 9; j++) {
+			System.out.print(j+"*"+i+"="+(i*j)+"\t");
+			}
+			
+			System.out.println();
+		}
+		
+		System.out.println("----------------------------------------");
+		
+		
+	}
+
+}
+
+{% endhighlight %}
+
+{% highlight java %}
+
+package day_05;
+
+import java.util.Iterator;
+
+public class ForStar {
+
+	public static void main(String[] args) {
+		
+		for (int line = 0; line < 5; line++) {
+			
+			for (int star = 0; star <= line; star++) {
+				System.out.print("*");
+			}
+			System.out.println();
+			
+		}
+		
+		System.out.println("----------------------------------------");
+		
+			for (int line = 0; line < 5; line++) {
+			
+			for (int star = 5; star > line; star--) {
+				System.out.print("*");
+			}
+			System.out.println();
+			
+		}
+			
+			System.out.println("----------------------------------------");
+			
+			for (int line = 0; line < 5; line++) {
+			
+			for (int star = line+1; star < 5; star++) {
+				System.out.print(" ");
+			}
+			for (int star = 0; star <= line; star++) {
+				System.out.print("*");
+			}
+			System.out.println();
+			
+			}
+		
+		System.out.println("----------------------------------------");
+		
+			for (int line = 0; line < 5; line++) {
+			
+			for (int star = 1; star <= line; star++) {
+				System.out.print(" ");
+			}
+			for (int star = 5; star > line; star--) {
+				System.out.print("*");
+			}
+			System.out.println();
+			
+		}
+		System.out.println("----------------------------------------");
+		
+	}
+
+}
+
+
+{% endhighlight %}
+
+{% highlight java %}
+
+package day_05;
+
+import java.util.Iterator;
+
+public class BreakContinueMain {
+
+	public static void main(String[] args) {
+		
+		for (int i = 0; ; i++) {
+			System.out.println("break 시작 : "+i);
+			if(i==2) {
+				break;
+			}
+			System.out.println("break 끝 : "+i);
+		}
+		
+		System.out.println("----------------------------------");
+		
+		for (int i = 0; i < 5 ; i++) {
+			System.out.println("continue 시작 : "+i);
+			if(i==2) {
+				continue;
+			}
+			System.out.println("continue 끝 : "+i); //여기를 실행하지 않고 올라감 실무x
+		}
+		
+		System.out.println("----------------------------------");
+		
+		for (int i = 0; i < 5 ; i++) {
+			System.out.println("if 시작 : "+i);
+			if(i!=2) {
+				System.out.println("if 끝 : "+i); //컨티뉴랑 똑같음 컨티뉴 대신 이렇게 씀
+			}			
+		}
+		
+		System.out.println("----------------------------------");
+		
+		BIG:for (int bb = 0; bb < 500; bb+=100) {	//BIG SMALL -> Lable :어느 반복문인지 알게 함(안좋은방법)
+			System.out.println("bb 시작:"+bb);
+			
+			SMALL:for (int ss = 0; ss < 5; ss++) {
+				System.out.println("\t시작:"+(bb+ss));
+				//if(ss==2 && bb== 300) {
+				if(ss==2) {
+					break BIG;
+					//break;//현재 종속되어있는 for문을 탈출할때
+				}
+				System.out.println("\t끝:"+(bb+ss));				
+			}
+			if(bb==200) {
+				//break;
+			}
+			System.out.println("bb 끝:"+bb);
+		}
+		
+		System.out.println("----------------------------------");
+		
+		
+	}
+
+}
+
+
+{% endhighlight %}
+
+{% highlight java %}
+
+package day_05;
+
+public class WhileMain {
+
+	public static void main(String[] args) {
+		
+		int a = 10; //초기값
+		while(a <= 20) {
+			System.out.println("while 실행:"+a);
+			a+=3; //증감
+		}
+		
+		//while 문을 이용하여 0 -> 100 3의 배수 합을 구하세요
+		
+		int b = 0;
+		int c = 0;
+		while(b <= 100) {
+			c += b;
+			b += 3;			
+		}
+		System.out.println(c);
+		
+		
+	}
+
+}
+
+
+{% endhighlight %}
+
+{% highlight java %}
+
+package day_05;
+
+public class DoWhileMain {
+
+	public static void main(String[] args) {
+		
+		int a = 10;
+		 while (a<5) {
+			 System.out.println("while:"+a);
+			 a++;
+		 }	
+		 System.out.println("while 종료---------------------------");
+		 
+		 a = 10;
+		 do {
+			 System.out.println("do~while:"+a);
+			 a++;
+		 }while(a<5);
+		 System.out.println("do~while 종료---------------------------");
+		 
+	}
+
+}
+
+
+{% endhighlight %}
+
+{% highlight java %}
+
+package day_05;
+
+public class ArrayMain {
+
+	public static void main(String[] args) {
+		
+		int a = 10;
+		
+		//int [] arr = 20;
+		
+		//배열변수 선언
+		//자료형 [] 배열명 = {원소0, 원소1,...};
+		//원소는 자료형과 일치해야함
+		//배열 초기화시 배열 크기 설정 : 5개
+		int [] arr = {12,34,56,78,'a'};//123.456,"567",true,12345678900
+		
+		System.out.println("arr:"+arr); //배열주소
+		
+		arr[0] = 9876; //배열원소의 대입
+		arr[1] +=500;
+		//arr[5] = 8888; 인덱스가 없는 원소 대입 불가
+		//배열원소 호출
+		System.out.println("arr[0]"+arr[0]);
+		System.out.println("arr[1]"+arr[1]);
+		System.out.println("arr[2]"+arr[2]);
+		System.out.println("arr[3]"+arr[3]);
+		System.out.println("arr[4]"+arr[4]);
+		//인덱스가 없는 원소 호출 불가
+		//System.out.println("arr[5]"+arr[5]);
+		
+		System.out.println("arr.length:"+arr.length);
+		
+		
+		//for : 배열
+		for (int i = 0; i < arr.length; i++) {
+			
+			int kk = arr[i];
+			System.out.println("arr["+i+"]"+arr[i]+","+kk);
+		}
+		
+		System.out.println("------------------------------");
+		
+		for(int kk : arr) {
+			System.out.println(kk);
+		}
+		
+		//arr = {111,222,333}
+		
+		int [] arr2;
+		//arr2 = {111,222,333}
+		arr2 = new int[] {111,222,333};
+		
+		int[] arr3 = new int [] {99,88,77,66};
+		
+		System.out.println("------------------------------");
+		
+		for(int kk : arr2) {
+			System.out.println(kk);
+		}
+		
+		System.out.println("------------------------------");
+		
+		for(int kk : arr3) {
+			System.out.println(kk);
+		}
+		
+		//원소 5개인 배열 생성
+		int [] arr4 = new int[5];
+		
+		System.out.println("--------------------------------");
+		
+		for(int kk : arr4) {
+			System.out.println(kk);
+		}
+	}
+
+}
+
+
+{% endhighlight %}
+
+{% highlight java %}
+
+package day_05;
+
+public class ArrayNumMain {
+
+	public static void main(String[] args) {
+		
+		//짝수들의 합
+		int [] nums = {67,8,23,6,9,12,25,37,42};
+		
+		int tot = 0;
+		
+		for (int i : nums) {
+			if(i%2==0) {
+				tot += i;
+				System.out.println(i+","+tot);
+			}
+		}
+		System.out.println(tot);
+		
+		//국어, 영어, 수학, 과학, 국사 점수를 배열로 처리하고
+		//총점, 평균을 구하세요
+		//87,67,97,77,57
+		
+		String [] title = {"국어","영어","수학","과학","국사"};	
+		int [] arr = {87,67,97,77,57};
+		int sum = 0;
+		double avg = 0;
+	
+		/*for(int n : arr) {
+			sum += n;
+		}
+		
+		avg = (double)sum / arr.length;*/
+		
+		for (int i = 0; i < arr.length; i++) {
+			sum += arr[i];
+			System.out.println(title[i]+":"+arr[i]);
+		}
+		avg = (double)sum / arr.length;
+		
+		System.out.println("총점:"+sum);
+		System.out.println("평균:"+avg);
+	}
+
+}
+
+
+{% endhighlight %}
+
+{% highlight java %}
 {% endhighlight %}
 
 {% highlight java %}
