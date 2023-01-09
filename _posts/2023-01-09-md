@@ -1318,6 +1318,52 @@ public class ArrayNumMain {
 {% endhighlight %}
 
 {% highlight java %}
+
+package day_05;
+
+import java.util.Arrays;
+
+public class ArrayAddrMain {
+
+	public static void main(String[] args) {
+		
+		int a = 10;
+		int b = a;
+		a = 20;
+		
+		System.out.println(a+","+b);
+		
+		int [] arr1 = {11,22,33};
+		int [] arr2 = {11,22,33};
+		int [] arr3 = arr1; //주소복사 shallow copy (얕은 복사)
+		int [] arr4 = arr1.clone(); //똑같이 새로 만듦 deep copy (깊은 복사)
+		
+		//클론 수동으로 만들기
+		int [] arr5 = new int[arr1.length];
+		
+		for (int i = 0; i < arr5.length; i++) {
+			arr5[i] = arr1[i];
+		} //여기까지 수동 만들기 끝
+		
+		System.out.println("arr1:"+arr1+Arrays.toString(arr1));
+		System.out.println("arr2:"+arr2+Arrays.toString(arr2));
+		System.out.println("arr3:"+arr3+Arrays.toString(arr3));
+		System.out.println("arr4:"+arr4+Arrays.toString(arr4));
+		System.out.println("arr5:"+arr5+Arrays.toString(arr5));
+		
+		arr1[1] = 2345;	
+		arr2[2] = 3030;
+		System.out.println("변경후");		
+		System.out.println("arr1:"+arr1+Arrays.toString(arr1));
+		System.out.println("arr2:"+arr2+Arrays.toString(arr2));
+		System.out.println("arr3:"+arr3+Arrays.toString(arr3));
+		System.out.println("arr4:"+arr4+Arrays.toString(arr4));
+		System.out.println("arr5:"+arr5+Arrays.toString(arr5));
+	}
+
+}
+
+
 {% endhighlight %}
 
 {% highlight java %}
