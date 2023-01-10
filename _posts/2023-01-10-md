@@ -4,9 +4,12 @@ hero: https://source.unsplash.com/collection/430473/
 overlay: blue
 published: true
 
-##html
+#html
 
-1. html의 구조 (html은 구조화 되어있다.)
+##1. html의 구조 
+>html은 구조화 되어있다.
+
+```markdown
 <html>
 
   <head>
@@ -18,7 +21,4 @@ published: true
   </body>
 
 </html>
-
-```markdown
-
 ```
