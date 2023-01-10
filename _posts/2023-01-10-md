@@ -64,17 +64,72 @@ published: true
     Rerum recusandae consectetur tempora ipsum facilis minima quod quam fugiat. Soluta voluptatum quaerat delectus recusandae, dolor nemo, officia eveniet enim quia sint amet a obcaecati natus laboriosam consectetur perspiciatis nisi.
     Ipsam, unde soluta. Suscipit, hic doloremque autem minus iste ipsam ullam quia accusamus quam in repudiandae odit possimus quasi facere magnam voluptatibus nesciunt! Recusandae aspernatur debitis architecto hic atque? Consequuntur.</p>
 
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-    <b>Sed aut pariatur quod inventore quaerat deleniti eius tempore</b> 
-    <i>aspernatur recusandae enim dolorem consectetur maxime exercitationem</i> 
-    perferendis hic, commodi ab eveniet nostrum?
-    Eos, molestias fugiat quos dolore libero dignissimos. 
+    Lorem ipsum dolor sit amet consectetur 
+    <b>Sed aut pariatur quod inventore</b>
+    <i>quaerat deleniti eius tempore</i> 
+    <tt>aspernatur recusandae enim dolorem</tt>
+    <u>consectetur maxime exercitationem</u> 
+    <s>perferendis hic, commodi ab eveniet nostrum?</s>
+    <sub>Eos, molestias fugiat quos dolore libero dignissimos.</sub>
+    <sup>Lorem ipsum dolor sit amet consectetur</sup>
 
     <!--
         b : 볼드
         i : 이탤릭
+        tt : 타자기
+        u : 밑줄
+        s : 취소선(가운데줄)
+        sub : 아래첨자
+        sup : 윗첨자
+    -->
+    
+    Lorem ipsum dolor sit amet consectetur <font color="red">adipisicing elit.</font> Ut, excepturi.</br>
+    Lorem ipsum dolor sit amet consectetur <font color="blue">adipisicing elit.</font> Esse, deleniti!</br>
+    Lorem ipsum dolor, sit amet consectetur <font color="#ff0000">adipisicing elit.</font> Amet, velit!</br>
+    Lorem ipsum, dolor sit amet consectetur <font color="#0000ff">adipisicing elit.</font> Optio, dolorem?</br>
+    Lorem ipsum dolor sit amet consectetur <font color="#f00">adipisicing elit.</font> Illo, deleniti.</br>
+    Lorem ipsum dolor sit amet consectetur, <font color="#00f">adipisicing elit.</font> Rerum, illum?</br>
+
+    <!--
+        #FF 00 00  FF=1byte
+         R  G  B
+        
+        bit                                         byte
+                                BCD     ASCII       EBCDIC
+        1       2   3   4   5   6       7           8
+        2       4   8   16  32  64      128         256
+        ---------------------------------------------------------------
+        0(off)  00  000 0~9     a~z:26  +특수기호   +부호(0:양수, 1:음수)
+        1(on)   01  001         A~Z:26
+                10  010         0~9:10
+                11  011             62
+                    100
+                    101
+                    110
+                    111
     -->
 
+    <font color="#f00">빨</font>
+    <font color="#FF8000">주</font>
+    <font color="#ff0">노</font>
+    <font color="#0f0">초</font>
+    <font color="#00f">파</font>
+    <font color="#210B61">남</font>
+    <font color="#A901DB">보</font>
+
+    <font size="1">Lorem ipsum dolor sit amet.</font>
+    <font size="2">Lorem ipsum dolor sit amet.</font>
+    <font size="3">Lorem ipsum dolor sit amet.</font>
+    <font size="4">Lorem ipsum dolor sit amet.</font>
+    <font size="5">Lorem ipsum dolor sit amet.</font>
+
+    Lorem ipsum dolor sit amet.</br>
+    a < b </br>
+    a > b </br>
+    a &lt; b </br>
+    a &gt; b </br>
+    &copy;</br>
+    
 </body>
 </html>
 ```
