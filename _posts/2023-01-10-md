@@ -22,3 +22,59 @@ published: true
 
 </html>
 ```
+##2.
+
+```markdown
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01_text 입니다.</title>
+</head>
+<body>
+    아기 상어 뚜루루 뚜루
+    <h1>엄마상어</h1>
+    <h2>아빠상어</h2>
+    <h3>할머니상어</h3>
+    <h4>할아버지상어</h4>
+    <h5>형아상어</h5>
+    <h6>동생상어</h6>
+    <h7>h7인갑다</h7> 
+
+    <!-- 
+        주석 : 설명이나 작업내용을 기재한다. 
+        웹페이지에서 페이지소스보기를 누르면 주석도 다 보인다.
+        <h1>~<h6>는 제목으로 표시한다.
+        <p>태그는 단락을 나눈다 : 단락이 자동으로 나누어진다.
+        </br> : 줄 바꾸기
+        align="" : 속성 -- 문단 정렬 속성 : left(기본), center, right
+
+        Lorem ipsum dolor sit amet. (lorem5)
+        밑에 글들은 lorem*5로 쓴거 -->
+
+    <p align="center">Lorem ipsum dolor sit amet &nbsp;&nbsp;&nbsp;consectetur adipisicing elit. Exercitationem pariatur blanditiis, quos, cumque voluptas numquam laudantium, harum accusantium ex praesentium ut voluptatem voluptatibus corporis fugiat ea eveniet architecto. Pariatur, ipsa!
+    Rerum recusandae consectetur tempora ipsum facilis minima quod quam fugiat. Soluta voluptatum quaerat delectus recusandae, dolor nemo, officia eveniet enim quia sint amet a obcaecati natus laboriosam consectetur perspiciatis nisi.
+    Ipsam, unde soluta. Suscipit, hic doloremque autem minus iste ipsam ullam quia accusamus quam in repudiandae odit possimus quasi facere magnam voluptatibus nesciunt! Recusandae aspernatur debitis architecto hic atque? Consequuntur.</p>
+
+    <p align="right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem pariatur </br>blanditiis, quos, cumque voluptas numquam laudantium, harum accusantium ex praesentium ut voluptatem voluptatibus corporis fugiat ea eveniet architecto. Pariatur, ipsa!
+    Rerum recusandae consectetur tempora ipsum facilis minima quod quam fugiat. Soluta voluptatum quaerat delectus recusandae, dolor nemo, officia eveniet enim quia sint amet a obcaecati natus laboriosam consectetur perspiciatis nisi.
+    Ipsam, unde soluta. Suscipit, hic doloremque autem minus iste ipsam ullam quia accusamus quam in repudiandae odit possimus quasi facere magnam voluptatibus nesciunt! Recusandae aspernatur debitis architecto hic atque? Consequuntur.</p>
+
+    <p align="left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem pariatur blanditiis, quos, cumque voluptas numquam laudantium, harum accusantium ex praesentium ut voluptatem voluptatibus corporis fugiat ea eveniet architecto. Pariatur, ipsa!
+    Rerum recusandae consectetur tempora ipsum facilis minima quod quam fugiat. Soluta voluptatum quaerat delectus recusandae, dolor nemo, officia eveniet enim quia sint amet a obcaecati natus laboriosam consectetur perspiciatis nisi.
+    Ipsam, unde soluta. Suscipit, hic doloremque autem minus iste ipsam ullam quia accusamus quam in repudiandae odit possimus quasi facere magnam voluptatibus nesciunt! Recusandae aspernatur debitis architecto hic atque? Consequuntur.</p>
+
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    <b>Sed aut pariatur quod inventore quaerat deleniti eius tempore</b> 
+    <i>aspernatur recusandae enim dolorem consectetur maxime exercitationem</i> 
+    perferendis hic, commodi ab eveniet nostrum?
+    Eos, molestias fugiat quos dolore libero dignissimos. 
+
+    <!--
+        b : 볼드
+        i : 이탤릭
+    -->
+
+</body>
+</html>
+```
