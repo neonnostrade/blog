@@ -1,5 +1,5 @@
 layout: post
-title:  "2023-01-09"
+title:  "java 선행학습"
 hero: https://source.unsplash.com/collection/430475/
 overlay: purple
 published: true
@@ -1362,15 +1362,4 @@ public class ArrayAddrMain {
 	}
 
 }
-
-
-{% endhighlight %}
-
-{% highlight java %}
-{% endhighlight %}
-
-{% highlight java %}
-{% endhighlight %}
-
-{% highlight java %}
 {% endhighlight %}
