@@ -1,0 +1,81 @@
+---
+layout: post
+title:  "[2일차]"
+hero: https://source.unsplash.com/collection/345751
+overlay: blue
+published: true
+---
+
+# 목록
+##1.순서가 있는 리스트
+<ol>
+ <li> (쓸때 li*숫자 하면 그 수만큼 생성)
+ <li>
+</ol>
+
+<h1>Order List</h1>
+    <ol type="I">
+        <li>알</li>
+        <li>애벌레</li>
+        <li>번데기</li>
+        <li>나비</li>
+    </ol>
+
+    <ol type="A" start="5"> (5는 다섯번째)
+        <li>유치원</li>
+        <li value="24">
+            초등학교 식단표
+                <ol>
+                    <li>갈비탕</li>
+                    <li>목욕탕</li>
+                    <li>탕탕탕</li>
+                    <li>뇌진탕</li>
+                    <li>매운탕</li>
+                </ol>
+        </li>
+        <li>중학교</li>
+    </ol>
+
+##2. 순서가 없는 리스트
+<ul>
+ <li>
+ <li>
+</ul>
+
+<h1>UnOrder List</h1>
+    <ul>
+        <li>호랑이</li>
+        <li>사자</li>
+        <li>늑대</li>
+        <li>표범</li>
+    </ul>
+
+    <ul type="disk"> (기본값)
+        <li>의사</li>
+        <li>장의사</li>
+        <li>독사</li>
+        <li>안사</li>
+    </ul>
+
+    <ul type="circle">
+        <li>장동건</li>
+        <li>장서건</li>
+        <li>장남건</li>
+        <li>북두신건</li>
+    </ul>
+    
+##3. 정의리스트
+<dl>
+<dt>제목</dt>
+<dd>내용</dd>
+</dl>
+    
+  <h1>Definition List</h1>
+  <dl>
+      <dt>제목</dt>
+      <dd>김수한무거북이와두루미삼천갑자...</dd>
+      <dt>제목2</dt>
+      <dd>내가그린기린그림은</dd>
+      <dt>제목3</dt>
+      <dd>간장공장공장장은간공장장이고된장공장...</dd>
+  </dl>
