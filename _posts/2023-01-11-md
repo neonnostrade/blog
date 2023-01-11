@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[2일차]"
+title:  "[2일차]html"
 hero: https://source.unsplash.com/collection/345751
 overlay: blue
 published: true
@@ -79,3 +79,38 @@ published: true
       <dt>제목3</dt>
       <dd>간장공장공장장은간공장장이고된장공장...</dd>
   </dl>
+  
+  #이미지
+  
+  ##주소
+  
+  ###1. 상대주소
+   파일이름
+  
+  ###2. 절대주소
+   이미지가 있는 폴더 경로 복사 후 \ --> / 로 변경하고 파일이름
+
+  <h1>01_img</h1>
+    <h3>상대주소</h3>
+    <img src="lemon.png" height="500px" alt="">
+    <h3>절대주소</h3>
+    <img src="C:/mi/html_work/link/lemon.png" height="500px" alt="">
+    <h3>상대주소 다른폴더</h3>
+    <img src="../link/lemon.png" height="500px" alt="">
+    
+    ##크기, 배치, 테두리
+    
+    <h3>크기</h3>
+    <img src="../imgs/game.jpg" height="100px" alt=""> height="높이px"
+    <img src="../imgs/game.jpg" height="200px" alt="">
+    <img src="../imgs/game.jpg" width="100px" alt=""> width="넓이px"
+    <img src="../imgs/game.jpg" width="200px" alt="">
+    <img src="../imgs/game.jpg" height="200px" width="200" alt="">
+    <img src="../imgs/game.jpg" height="200px" width="100" alt="">
+    <h3>배치</h3>
+    <img src="../imgs/cat.jpg" height="200px" alt="" align="left" hspace="30px"> align="left" 왼쪽정렬 | hspace="30px" 가로로 여백
+    <img src="../imgs/cat.jpg" height="150px" alt="" align="right" vspace="50px"> align="right" 오른쪽정렬 |  vspace="50px" 세로로 여백
+    <h3>테두리</h3>
+    <img src="../imgs/dog.jpg" height="200px" alt="" border="10px"> border="테두리두께px"
+    <img src="../imgs/dog.jpg" height="200px" alt="" border="3px">
+    <img src="../imgs/dog.jpg" height="200px" alt="" style="border: 10px dashed #0f0"> dashed --> 점선
