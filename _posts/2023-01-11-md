@@ -114,3 +114,27 @@ published: true
     <img src="../imgs/dog.jpg" height="200px" alt="" border="10px"> border="테두리두께px"
     <img src="../imgs/dog.jpg" height="200px" alt="" border="3px">
     <img src="../imgs/dog.jpg" height="200px" alt="" style="border: 10px dashed #0f0"> dashed --> 점선
+
+  ##배경
+  
+  ###1. 전체배경
+  <body style="background-color: aquamarine; background-image: url(../link/lemon.png); 
+  background-repeat: repeat-y; background-size: 200px; background-position: 700px 100px;"></body>
+  
+  ###2. 
+  <div style="background: #ff0; width: 600px; height: 200px;">div1 입니다.
+    <img src="lemon.png" width="50px"><img src="lemon.png" width="50px"><img src="lemon.png" width="50px"><img src="lemon.png" width="50px"><img src="lemon.png" width="50px">
+    </div> (글자처럼 띄어쓰기 반영됨 - 저렇게 안함)
+    
+    <div style="background-image:url(../imgs/game.jpg); width: 600px; height: 400px; background-size: 50px 20px;">div2 입니다.</div>
+    (이미지로 패턴 | width: 600px; height: 400px; - 백그라운드크기 | background-size - 이미지크기)
+    
+    <div style="background: #faf; width: 800px; height: 600px; background-image:url(../imgs/cat.jpg); background-size: 150px 100px;
+                background-repeat: no-repeat; background-position: 480px 170px;">div3 입니다.</div>
+    (리피트랑 포지션으로 컬러 백그라운드 안에 사진 작게 위치 조정가능)
+    
+    background-color: rgb(0, 255, 255);
+    rgba(255, 160, 255, 0.7);
+    
+    ##링크
+    
