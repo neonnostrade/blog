@@ -1,0 +1,149 @@
+---
+layout: post
+title:  "[3일차]html"
+hero: https://source.unsplash.com/collection/345752
+overlay: blue
+published: true
+---
+
+# 링크
+<head>
+<style>
+        a{
+            text-decoration: none;
+            color:#0f0;
+        }
+        /*
+        a:link{
+            color: #0f0;
+        }
+        a:visited{
+            color: #f00;
+        }*/
+        a:hover{
+            color: rgb(230, 105, 255);
+        }
+    </style>
+    </head>
+    <!-- 헤드 안에 적으면 전체설정변경-->
+    
+    <hr> 가로선
+    <!--<div style=" height: 25px; border-bottom: 1px solid black; border-top: 1px solid black;"> 이런식으로 위아래 선그릴 수도 있음-->
+    
+#표
+
+<body>
+    <h1>01_table</h1>
+
+    <!-- table : 표 
+         tr : 행 
+         td : 칸
+        
+         bgcolor : 배경색
+         td > tr > table ::> 작은영역에 우선권이 있음-->
+    <table border="" bgcolor="#0ff">
+        <tr height="100px">
+            <td width="100px">1_1</td>
+            <td width="100px">1_2</td>
+            <td width="100px">1_3</td>
+        </tr>
+        <tr bgcolor="#0f0">
+            <td width="50px" height="30px">2_1</td> <!--같은줄이니까 다 30px로 나옴 - 더 큰 50px로 나옴-->
+            <td height="10px" bgcolor="#f0f">2_2</td>
+            <td height="50px">2_3</td>
+        </tr>
+        <tr height="50px">
+            <td height="10px" rowspan="2">3_1</td> <!--밑으로 한칸밀고 합쳐짐 - 4_1 삭제(수동)-->
+            <td height="100px" colspan="2">3_2</td> <!--오른쪽으로 한칸 밀고 합쳐짐 - 3_3 삭제-->
+        </tr>
+        <tr>
+            <td width="300px">4_2</td> <!--더 큰 사이즈에 맞춰서 나옴-->
+            <td>4_3</td>
+        </tr>
+        <tr height="100px">                     <!--정가운데로 나눠서 2개 칸 만들기하는법-->
+            <td colspan="3">                    <!--일단 3개합치고 나머지 2칸 지우기-->
+                <table border="">               <!--td안에 객체인 테이블을 넣을 수 있다-->
+                    <tr height="100px">         <!--크롬 개발자도구로 표넓이보고 적정값을 넣음-->
+                        <td width="260px">
+                            <img src="../imgs/cat.jpg" width="260px" alt=""> <!--사진도 넣을 수 있다-->
+                        </td>
+                        <td width="260px">n_2</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+##달력만들기
+
+<body>
+    <h1>02_diary</h1>
+    <table border="" cellpadding="10" cellspacing="0">
+        <tr>
+            <td colspan="7">
+                <img src="../imgs/game.jpg" width="400px" alt="">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="7" align="center">
+                <h1>2023년 1월</h1>
+            </td>
+        </tr>
+        <tr align="center">
+            <td bgcolor="#f00" style="color: #fff;">일</td>
+            <td>월</td>
+            <td>화</td>
+            <td>수</td>
+            <td>목</td>
+            <td>금</td>
+            <td bgcolor="#00f" style="color: #fff;">토</td>
+        </tr>
+        <tr align="right">
+            <td style="color: #f00;">1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td style="color: #00f;">7</td>
+        </tr>
+        <tr align="right">
+            <td style="color: #f00;">8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td bgcolor="#ff0">12</td>
+            <td>13</td>
+            <td style="color: #00f;">14</td>
+        </tr>
+        <tr align="right">
+            <td style="color: #f00;">15</td>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+            <td style="color: #00f;">21</td>
+        </tr>
+        <tr align="right">
+            <td style="color: #f00;">22</td>
+            <td>23</td>
+            <td>24</td>
+            <td>25</td>
+            <td>26</td>
+            <td>27</td>
+            <td style="color: #00f;">28</td>
+        </tr>
+        <tr align="right">
+            <td style="color: #f00;">29</td>
+            <td>30</td>
+            <td>31</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+
