@@ -1,0 +1,428 @@
+---
+layout: post
+title:  "[4일차]html"
+hero: https://source.unsplash.com/collection/345751
+overlay: blue
+published: true
+---
+
+#폼
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04_form</title>
+</head>
+<body>
+    <h1>04_form</h1>
+
+    <a href="joinReg.jsp?id=aaa&pw=1234">joinReg</a>
+    
+    <form action="joinReg.jsp">
+        <table border="">
+            <tr>
+                <td>아이디</td>
+                <td><input type="text" name="id" size="10" maxlength="8" value="aaa"/> <!--maxlength: =""안의 글자수 만큼만 | size보다는 스타일사용-->
+                    <!--button모양만 있음-->
+                    <input type="button" value="중복확인">
+                </td>
+            </tr>
+            <tr>
+                <td>이름</td>
+                <!-- placeholder : 내용 입력이 없을때 미리보기로 표시, value는 없음-->
+                <td><input type="text" name="pname" placeholder="이름을 입력하세요"></td>
+            </tr>
+            <tr>
+                <td>암호</td>
+                <td><input type="password" name="pw"></td>
+            </tr>
+            <tr>
+                <td>취미</td>
+                <td> <!-- checked : 미리 체크 value : 전송되는 값-->
+                    <input type="checkbox" name="hobby" value="climb">등산
+                    <input type="checkbox" name="hobby" value="soccer" checked>축구
+                    <input type="checkbox" name="hobby" value="reading" checked>독서 <!--checked : 기본값-->
+                </td>
+            </tr>
+            <tr>
+                <td>특기</td>
+                <td>
+                    <input type="radio" name="spec" value="codig">코딩
+                    <input type="radio" name="spec" value="debugging" checked>디버깅
+                    <input type="radio" name="spec" value="program" checked>프로그램 <!--checked나 selected를 여러개 했을땐 마지막꺼가 기본값-->
+                </td> <!--name이 있으면 하나만선택-->
+            </tr>
+            <tr>
+                <td>파일</td>
+                <td>
+                    단일 : <input type="file" name="ff1"><br/>
+                    다중 : <input type="file" multiple name="ff2"> <!--multiple 다중선택 가능-->
+                </td>
+            </tr>
+            <tr>
+                <td>이메일</td>
+                <td>
+                    <input type="text" name="email1">@
+                    <select name="email1">
+                        <option>naver.com</option> <!--value값이 없으면 텍스트가 날라감-->
+                        <option value="daum.net">....</option>
+                        <option value="google.com" selected>구글</option>
+                        <option value="yohoo.co.kr" selected>야후</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>자격증</td>
+                <td> <!--multiple 다중선택 | selected가 여러개 있을경우 여러개 선택-->
+                    <select name="license" multiple>
+                        <option>운전면허</option> <!--value값이 없으면 텍스트가 날라감-->
+                        <option selected>정보처리</option>
+                        <option selected>토익</option>
+                        <option>컴활</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>남기실말</td>
+                <td>
+                    <textarea name="content" cols="50" rows="5">
+                        아기상어
+                        뚜루루 뚜루루
+
+                        귀여운
+                        1234  567890
+                        as dfg hj
+                        !@#$%^&*()
+                    </textarea> <!--textarea안은 html이 아니라서 띄어쓰기 줄바꾸기를 그대로 인지함-->
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="reset" value="초기화" />
+                    <input type="submit" value="가입" />
+                    <button>가입2</button> <!--submit과 같은기능-->
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <form action="testReg.jsp"> <!--위 form과 다른 form (페이지단위가 아니고 폼단위)-->
+        <input type="text" name="sch">
+        <input type="submit" value="검색">
+    </form>
+</body>
+</html>
+
+#레이블
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04_form</title>
+</head>
+<body>
+    <h1>04_form</h1>
+
+    <a href="joinReg.jsp?id=aaa&pw=1234">joinReg</a>
+    
+    <form action="joinReg.jsp">
+        <table border="">
+            <tr>
+                <td>아이디</td>
+                <td><input type="text" name="id" size="10" maxlength="8" value="aaa"/> <!--maxlength: =""안의 글자수 만큼만 | size보다는 스타일사용-->
+                    <!--button모양만 있음-->
+                    <input type="button" value="중복확인">
+                </td>
+            </tr>
+            <tr>
+                <td>이름</td>
+                <!-- placeholder : 내용 입력이 없을때 미리보기로 표시, value는 없음-->
+                <td><input type="text" name="pname" placeholder="이름을 입력하세요"></td>
+            </tr>
+            <tr>
+                <td>암호</td>
+                <td><input type="password" name="pw"></td>
+            </tr>
+            <tr>
+                <td>취미</td>
+                <td> <!-- checked : 미리 체크 value : 전송되는 값-->
+                    <input type="checkbox" name="hobby" value="climb">등산
+                    <input type="checkbox" name="hobby" value="soccer" checked>축구
+                    <input type="checkbox" name="hobby" value="reading" checked>독서 <!--checked : 기본값-->
+                </td>
+            </tr>
+            <tr>
+                <td>특기</td>
+                <td>
+                    <input type="radio" name="spec" value="codig">코딩
+                    <input type="radio" name="spec" value="debugging" checked>디버깅
+                    <input type="radio" name="spec" value="program" checked>프로그램 <!--checked나 selected를 여러개 했을땐 마지막꺼가 기본값-->
+                </td> <!--name이 있으면 하나만선택-->
+            </tr>
+            <tr>
+                <td>파일</td>
+                <td>
+                    단일 : <input type="file" name="ff1"><br/>
+                    다중 : <input type="file" multiple name="ff2"> <!--multiple 다중선택 가능-->
+                </td>
+            </tr>
+            <tr>
+                <td>이메일</td>
+                <td>
+                    <input type="text" name="email1">@
+                    <select name="email1">
+                        <option>naver.com</option> <!--value값이 없으면 텍스트가 날라감-->
+                        <option value="daum.net">....</option>
+                        <option value="google.com" selected>구글</option>
+                        <option value="yohoo.co.kr" selected>야후</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>자격증</td>
+                <td> <!--multiple 다중선택 | selected가 여러개 있을경우 여러개 선택-->
+                    <select name="license" multiple>
+                        <option>운전면허</option> <!--value값이 없으면 텍스트가 날라감-->
+                        <option selected>정보처리</option>
+                        <option selected>토익</option>
+                        <option>컴활</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>남기실말</td>
+                <td>
+                    <textarea name="content" cols="50" rows="5">
+                        아기상어
+                        뚜루루 뚜루루
+
+                        귀여운
+                        1234  567890
+                        as dfg hj
+                        !@#$%^&*()
+                    </textarea> <!--textarea안은 html이 아니라서 띄어쓰기 줄바꾸기를 그대로 인지함-->
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="reset" value="초기화" />
+                    <input type="submit" value="가입" />
+                    <button>가입2</button> <!--submit과 같은기능-->
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <form action="testReg.jsp"> <!--위 form과 다른 form (페이지단위가 아니고 폼단위)-->
+        <input type="text" name="sch">
+        <input type="submit" value="검색">
+    </form>
+</body>
+</html>
+
+#div
+
+##display
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01_display</title>
+    <style>
+        div,span,table,img{
+            border: 2px solid #f00;
+        }
+        .big{
+            border: none;
+            background: #ff0;
+            margin: 20px;
+            width: 700px;
+            height: 100px;
+        }
+        .big > div, .big > span{
+            border: 1px solid #00f;
+            background: #0f0;;
+            width: 100px;
+            height: 30px;
+        }
+        #bb > div{
+            display: block;
+        }
+        #ib > div{
+            display: inline-block; /*div:block, img:inline-block, span:inline (기본값)*/
+        }
+        #ii > div{
+            display: inline;
+        }
+
+        #bb > span{
+            display: block;
+        }
+        #ib > span{
+            display: inline-block;
+        }
+        #ii > span{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <h1>01_display</h1>
+    <div>div1</div>
+    <div style="width: 300px;">div2</div>
+    <div>div3</div>
+    <hr>
+    <span>span1</span>
+    <span style="width: 300px;">span2</span> <!--span은 크기조절 불가-->
+    <span>span3</span>
+    <hr>
+    <table style="width: 300px;"><tr><td>table1</td></tr></table>
+    <table><tr><td>table2</td></tr></table>
+    <table><tr><td>table3</td></tr></table>
+    <hr>
+    <img src="../media/icon01.png" alt="">
+    <img  style="width: 300px;"src="../media/icon02.png" alt="">
+    <img src="../media/icon03.png" alt="">
+
+    <hr>
+    <div class="big" id="bb">
+        <div>bb1</div>
+        <div>bb2</div>
+        <div>bb3</div>
+    </div>
+    <hr>
+    <div class="big" id="ib">
+        <div>ib1</div>
+        <div>ib2</div>
+        <div>ib3</div>
+    </div>
+    <hr>
+    <div class="big" id="ii">
+        <div>ii1</div>
+        <div>ii2</div>
+        <div>ii3</div>
+    </div>
+
+    <hr>
+    <div class="big" id="bb">
+        <span>bb1</span>
+        <span>bb2</span>
+        <span>bb3</span>
+    </div>
+    <hr>
+    <div class="big" id="ib">
+        <span>ib1</span>
+        <span>ib2</span>
+        <span>ib3</span>
+    </div>
+    <hr>
+    <div class="big" id="ii">
+        <span>ii1</span>
+        <span>ii2</span>
+        <span>ii3</span>
+    </div>
+</body>
+</html>
+
+##float
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02_float</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0; /* * : 전체설정 */
+        }
+        div > div {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #00f; /*모든 div 속 div*/
+        }
+        .big{
+            width: 208px;
+            height: 240px;
+            background: #ff0; /*div를 감싸는 .big div*/
+            margin: 10px;
+        }
+        .ll > div {
+           float: left;
+           padding: 10px; /*각각 div속 div의 class값에 맞는애 설정*/
+           background: #f0f;
+        }
+        .rr > div {
+           float: right;
+           background: #0ff;
+           margin: 10px;
+        }
+        .ib > div{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>02_float</h1>
+    <div class="big">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="big , ll">
+        <div>왼쪽1</div>
+        <div>왼쪽2</div>
+        <div>왼쪽3</div>
+        <div>왼쪽4</div>
+    </div>
+    <div class="big , rr">
+        <div>오른쪽1</div>
+        <div>오른쪽2</div>
+        <div>오른쪽3</div>
+        <div>오른쪽4</div>
+    </div>
+    <div class="big , ib">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
+
+##div exam
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>div_exam</title>
+    <style>
+        .big {
+            background: #fc77fc;
+            width: 819px;
+            height: 476px;
+        }
+        .aa > div{
+            width: 235px;
+            height: 200px;
+            padding: 6px;
+            margin: 12px;
+            border: 1px solid #f00;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>div_exam</h1>
+    <div class="big , aa">
+        <div>box1</div>
+        <div>box2</div>
+        <div>box3</div>
+        <div>box4</div>
+        <div>box5</div>
+        <div>box6</div>
+    </div>
+</body>
+</html>
