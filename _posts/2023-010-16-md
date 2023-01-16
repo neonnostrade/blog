@@ -1,0 +1,415 @@
+---
+layout: post
+title:  "[5일차]html"
+hero: https://source.unsplash.com/collection/345752
+overlay: blue
+published: true
+---
+
+#overflow
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04_overflow</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .big{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            background: #ff0;
+            margin: 20px;
+        }
+        #hh{
+            overflow: hidden;
+        }
+        #ss{
+            overflow: scroll;
+        }
+        #aa{
+            overflow: auto;
+        }
+        #vv{
+            overflow: visible;
+        }
+    </style>
+</head>
+<body>
+    <h1>04_overflow</h1>
+    <div class="big" id="hh">
+        <img src="../imgs/cat.jpg" height="150px" width="250px" alt="">
+    </div>
+    <div class="big" id="ss">
+        <img src="../imgs/cat.jpg" height="150px" width="250px" alt="">
+    </div>
+    <div class="big" id="ss">
+        <img src="../imgs/cat.jpg" height="150px" width="150px" alt="">
+    </div>
+    <div class="big" id="aa">
+        <img src="../imgs/cat.jpg" height="150px" width="150px" alt="">
+    </div>
+    <div class="big" id="aa">
+        <img src="../imgs/cat.jpg" height="150px" width="250px" alt="">
+    </div>
+    <div class="big" id="aa">
+        <img src="../imgs/cat.jpg" height="250px" width="150px" alt="">
+    </div>
+    <div class="big" id="aa">
+        <img src="../imgs/cat.jpg" height="250px" width="250px" alt="">
+    </div>
+    <div class="big" id="vv">
+        <img src="../imgs/cat.jpg" height="150px" width="250px" alt="">
+    </div>
+    <div class="big">
+        <img src="../imgs/cat.jpg" height="150px" width="250px" alt="">
+    </div>
+</body>
+</html>
+
+#gallery
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05_gallery</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #big{ 
+            width: 250px;
+            height: 250px;
+            background: #ff0;
+            border: 2px solid #f00;
+            overflow: auto;
+            float: left;
+            margin: 50px;
+        }
+        #big > div{
+            width: 2000px;
+            height: 200px;
+            background: #0ff;
+        }
+        #big > div > img{
+            width: 250px;
+            height: 200px;
+            display: block;
+            float: left;
+        }
+        #big > img{
+            width:230px;
+            height: 250px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>05_gallery</h1>
+    <div id="big">
+        <div>
+            <img src="../imgs/i01.jpg" alt="">
+            <img src="../imgs/i02.jpg" alt="">
+            <img src="../imgs/i03.jpg" alt="">
+            <img src="../imgs/i04.jpg" alt="">
+            <img src="../imgs/i05.jpg" alt="">
+            <img src="../imgs/i06.jpg" alt="">
+            <img src="../imgs/i07.jpg" alt="">
+            <img src="../imgs/i08.jpg" alt="">
+        </div>
+    </div>
+
+    <div id="big">
+            <img src="../imgs/i01.jpg" alt="">
+            <img src="../imgs/i02.jpg" alt="">
+            <img src="../imgs/i03.jpg" alt="">
+            <img src="../imgs/i04.jpg" alt="">
+            <img src="../imgs/i05.jpg" alt="">
+            <img src="../imgs/i06.jpg" alt="">
+            <img src="../imgs/i07.jpg" alt="">
+            <img src="../imgs/i08.jpg" alt="">
+    </div>
+</body>
+</html>
+
+#mpb
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06_mpb</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background: #ff0;
+            border: 1px solid #000;
+            float: left;
+        }
+        .mm1{
+            margin: 30px;
+        }
+        .mm2{
+            margin: 50px 20px; /*상하 좌우*/
+        }
+        .mm3{
+            margin: 50px 100px 10px 0px; /*위 오른쪽 아래 왼쪽 (시계방향)*/
+        }
+        .mm4{
+            margin-top: 50px;
+            margin-right: 100px;
+            margin-bottom: 10px;
+            margin-left: 0px;
+        }
+        h1{
+            clear:both;/*float left 초기화*/
+        }
+        .pp1{
+            padding: 30px;
+        }
+        .pp2{
+            padding: 50px 20px; /*상하 좌우*/
+        }
+        .pp3{
+            padding: 50px 100px 10px 0px; /*위 오른쪽 아래 왼쪽 (시계방향)*/
+        }
+        .pp4{
+            padding-top: 50px;
+            padding-right: 100px;
+            padding-bottom: 10px;
+            padding-left: 0px;
+        }
+        .tt1{
+            border: 20px solid #f00;
+            margin: 20px;
+        }
+        .tt2{
+            border: 20px dotted #f00;
+            margin: 20px;
+        }
+        .tt3{
+            border: 20px dashed #f00;
+            margin: 20px;
+        }
+        .tt4{
+            border: 20px double #f00;
+            margin: 20px;
+        }
+        .tt5{
+            border: 20px groove #f00;
+            margin: 20px;
+        }
+        .tt6{
+            border: 20px ridge #f00;
+            margin: 20px;
+        }
+        .rr1{
+            margin: 20px;
+            border-radius: 20px;
+        }
+        .rr2{
+            margin: 20px;
+            border-radius: 50px;
+        }
+        .rr3{
+            margin: 20px;
+            border-radius: 100px;
+        }
+        .rr4{
+            margin: 20px;
+            border-radius: 10px 50px; 
+                          /*↖↘  ↗↙*/
+        }
+        .rr5{
+            margin: 20px;
+            border-radius: 10px 0px 50px 30px;
+        }
+        .rr6{
+            margin: 20px;
+            /*border-radius: 10px 0px 50px 30px;*/
+            border-top-left-radius: 10px;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 50px;
+            border-bottom-left-radius: 30px;
+        }
+        .bb1{
+            margin: 20px;
+            border: 20px solid rgba(255,0,0,0.5);
+        }
+        .bb2{
+            margin: 20px;
+            /*border: 20px solid rgba(255,0,0,0.5)
+                    50px 50px solid #00f;*/
+            border-top: 20px solid #f00;
+            border-right: 10px dotted #0f0;
+            border-bottom: 5px dashed #00f;
+            border-left: 30px double #0ff;        
+        }
+        .bb3{
+            margin: 20px;
+            background-image: url(../imgs/g01.jpg);
+            background-size: 100px;
+            border-radius: 50px;
+            border-top: 4px groove #00f;
+            border-right: 4px groove #0f0;
+            border-bottom: 4px groove #ff0;
+            border-left: 4px groove #f00;
+        }
+    </style>
+</head>
+<body>
+    <h1>margin</h1>
+    <div class="mm1">마진1</div>
+    <div class="mm2">마진2</div>
+    <div class="mm3">마진3</div>
+    <div class="mm4">마진4</div>
+    <h1>padding</h1>
+    <div class="pp1">패딩1</div>
+    <div class="pp2">패딩2</div>
+    <div class="pp3">패딩3</div>
+    <div class="pp4">패딩4</div>
+    <h1>border type</h1>
+    <div class="tt1">보더타입1</div>
+    <div class="tt2">보더타입2</div>
+    <div class="tt3">보더타입3</div>
+    <div class="tt4">보더타입4</div>
+    <div class="tt5">보더타입5</div>
+    <div class="tt6">보더타입6</div>
+    <h1>border radius</h1>
+    <div class="rr1">보더 라디우스1</div>
+    <div class="rr2">보더 라디우스2</div>
+    <div class="rr3">보더 라디우스3</div>
+    <div class="rr4">보더 라디우스4</div>
+    <div class="rr5">보더 라디우스5</div>
+    <div class="rr6">보더 라디우스6</div>
+    <h1>border</h1>
+    <div class="bb1">보더1</div>
+    <div class="bb2">보더2</div>
+    <div class="bb3">보더3</div>
+</body>
+</html>
+
+#flex
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>07_flex</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .tot{
+            width: 800px;
+            height: 300px;
+            background: #ff0;
+            margin: 20px;
+            display: flex;
+        }
+        .tot > div{
+            width: 50px;
+            height: 50px;
+            background: #0ff;
+            border: 1px solid #888;
+        }
+        .rr{
+            flex-direction: row; /*기본값*/
+            align-items: center;
+            justify-content: center;
+        }
+        .cc{
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .rr_s{
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: center;
+        }
+        .cc_s{
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: center;
+        }
+        .s_between{
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .s_around{
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .s_evenly{
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+<body>
+    <h1>07_flex</h1>
+    <h2>row</h2>
+    <div class="tot rr">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+    <h2>column</h2>
+    <div class="tot cc">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+    <h2>row-reverse</h2>
+    <div class="tot rr_s">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+    <h2>column-reverse</h2>
+    <div class="tot cc_s">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+    <h2>space_between</h2>
+    <div class="tot s_between">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+    <h2>space_around</h2>
+    <div class="tot s_around">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+    <h2>space_evenly</h2>
+    <div class="tot s_evenly">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>
+</html>
