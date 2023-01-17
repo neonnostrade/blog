@@ -413,3 +413,92 @@ published: true
     </div>
 </body>
 </html>
+
+#selecter - tag
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01_tag</title>
+    <style>
+        *{
+            margin: 20px;
+        }
+        html{
+            background: #333;
+        }
+        body{
+            color: #00f;
+        }
+        h1, h3{
+            background: #ff0;
+        }
+        h3, h5{
+            border: 2px solid #f00;
+        }
+        h3, p{
+            background: #0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lorem 아기상어</h1>
+    <h2>Lorem 아기상어</h2>
+    <h3>Lorem 아기상어</h3>
+    <h4>Lorem 아기상어</h4>
+    <h5>Lorem 아기상어</h5>
+    <h6>Lorem 아기상어</h6>
+    <p>Lorem 아기상어</p>
+    <div>Lorem 아기상어</div>
+    <span>Lorem 아기상어</span>
+    Lorem 아기상어
+</body>
+</html>
+
+- class id
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02_class_id</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            border: 2px solid #ccc;
+        }
+        .box2{
+            border: 2px solid #f00;
+            background: #ff0;
+            font-size: 40px;
+        }
+        #dd3{
+            color: #0f0;
+            background: #f0f;       /* 우선순위: * < 기본태그 < class < id*/
+        }
+    </style>
+</head>
+<body>
+    <h1>02_class_id</h1>
+    <div>div 1</div>
+    <div class="box2">div2 box2</div>
+    <div id="box2">div3 box2</div>
+
+    
+    <div id="dd3">div4 dd3</div>
+    <div class="dd3">div4 dd3</div>
+
+    <div class="box2" id="dd3">div5 box2 dd3</div>
+    <style>
+        #dd3{
+            color: #fa0;
+            font-size: 40px;        /*1. 마지막에 정의한 스타일로 모두 적용된다.*/
+        }
+    </style>
+    <div class="box2" id="dd3">div6 box2 dd3</div>
+    <div class="box2" id="dd3" style="background: #0ff;">div6 box2 dd3</div>    <!--2. < 기본태그 < class < id < 태그에 직접설정-->
+</body>
+</html>
